@@ -1,0 +1,12 @@
+apiVersion: configsync.gke.io/v1beta1
+kind: RepoSync
+metadata:
+  name: repo-sync
+  namespace: staging
+spec:
+  sourceFormat: unstructured
+  git:
+    repo: https://github.com/Roopa-Sri3/reposyncdemo.git
+    branch: main
+    policyDir: "/APPLICATIONS/STAGING"
+    auth: none

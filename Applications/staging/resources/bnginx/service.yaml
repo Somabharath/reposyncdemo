@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: b-nginx-service
+  namespace: staging
+spec:
+  selector:
+    app: b-nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: ClusterIP
