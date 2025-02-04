@@ -1,17 +1,22 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: staging
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: c-nginx
-  namespace: prod
+  name: b-nginx
+  namespace: staging
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: c-nginx
+      app: b-nginx
   template:
     metadata:
       labels:
-        app: c-nginx
+        app: b-nginx
     spec:
       containers:
       - name: nginx
