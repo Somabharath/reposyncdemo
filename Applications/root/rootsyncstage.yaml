@@ -8,5 +8,5 @@ spec:
   git:
     repo: https://github.com/Roopa-Sri3/reposyncdemo.git
     branch: main
-    policyDir: "/Applications/staging/"
+    dir: "/Applications/staging/"
     auth: none
