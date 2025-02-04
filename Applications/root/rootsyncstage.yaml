@@ -1,12 +1,12 @@
 apiVersion: configsync.gke.io/v1beta1
 kind: RootSync
 metadata:
-  name: root-sync-staging
+  name: rootsyncstaging
   namespace: config-management-system
 spec:
   sourceFormat: unstructured
   git:
     repo: https://github.com/Roopa-Sri3/reposyncdemo.git
     branch: main
-    dir: "/Applications/staging/"
+    dir: /Applications/staging/
     auth: none
