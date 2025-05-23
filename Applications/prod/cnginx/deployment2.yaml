@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: staging
+  annotations:
+    configsync.gke.io/cluster-name-selector: gke-service-poc-enterprise-eu-west-1
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: b-nginx
+  namespace: staging
+  annotations:
+    configsync.gke.io/cluster-name-selector: gke-service-poc-enterprise-eu-west-1  
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: b-nginx
+  template:
+    metadata:
+      labels:
+        app: b-nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.21.0
+        ports:
+        - containerPort: 80
