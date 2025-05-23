@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: staging1
+  name: staging2
   annotations:
     configsync.gke.io/cluster-name-selector: "gke-service-poc-enterprise-eu-west1"
 ---
