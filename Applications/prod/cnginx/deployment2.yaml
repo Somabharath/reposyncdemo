@@ -3,7 +3,7 @@ kind: Namespace
 metadata:
   name: staging
   annotations:
-    configsync.gke.io/cluster-name-selector: gke-service-poc-enterprise-eu-west-1
+    configsync.gke.io/cluster-name-selector: "gke-service-poc-enterprise-eu-west-1"
 ---
 apiVersion: apps/v1
 kind: Deployment
