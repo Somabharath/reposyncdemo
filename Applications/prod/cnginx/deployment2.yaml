@@ -13,7 +13,7 @@ metadata:
   annotations:
     configsync.gke.io/cluster-name-selector: "gke-service-poc-enterprise-eu-west4"  
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: b-nginx
