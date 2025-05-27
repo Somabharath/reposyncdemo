@@ -3,7 +3,7 @@ kind: Namespace
 metadata:
   name: staging2
   annotations:
-    configsync.gke.io/cluster-name-selector: "gke-service-poc-enterprise-eu-west4"
+    configsync.gke.io/cluster-name-selector: gke-service-poc-enterprise-eu-west4
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -11,7 +11,7 @@ metadata:
   name: b-nginx
   namespace: staging
   annotations:
-    configsync.gke.io/cluster-name-selector: "gke-service-poc-enterprise-eu-west4"  
+    configsync.gke.io/cluster-name-selector: gke-service-poc-enterprise-eu-west4  
 spec:
   replicas: 1
   selector:
