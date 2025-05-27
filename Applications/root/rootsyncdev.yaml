@@ -6,7 +6,7 @@ metadata:
 spec:
   sourceFormat: unstructured
   git:
-    repo: https://github.com/Roopa-Sri3/reposyncdemo.git
+    repo: https://github.com/Somabharath/reposyncdemo.git
     branch: main
     dir: /Applications/dev/
     auth: none
